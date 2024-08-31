@@ -7,7 +7,7 @@ Clases redes terciario urquiza
 3er encabezado
 
 
-| columna 1 | clumna 2 | columna 3 |
+| columna 1 | columna 2 | columna 3 |
 | --------- | ---------| --------- |
 | renglon1,columna1 | renglon1,columna2| renglon1,columna1 |
 | renglon2,columna1 | renglon2,columna2| renglon2,columna2 |
