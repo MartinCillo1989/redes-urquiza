@@ -30,6 +30,6 @@ classDiagram
         +removeMember(Member member)
     }
 
-    Libro --> Library : contiene
-    Member --> Library : registra
-    Librarian --> Library : administra
+    CUERPO TECNICO --> LOS DUEÑOS DE ROSARIO : contiene
+    PLANTEL --> LOS DUEÑOS DE ROSARIO : registra
+    UTILEROS --> LOS DUEÑOS DE ROSARIO : administra
