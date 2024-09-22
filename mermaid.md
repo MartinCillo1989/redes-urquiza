@@ -1,35 +1,45 @@
-```mermaid
-classDiagram
-    class CUERPO TECNICO {
-        +String titulo
-        +String autores
-        +String isbn
-        +boolean isAvailable()
-    }
+# Diagrama de Entidades
 
-    class PLANTEL {
-        +String name
-        +String memberId
-        +borrowBook(Book book)
-        +returnBook(Book book)
-    }
+## Entidades
 
-    class UTILEROS {
-        +String name
-        +String employeeId
-        +addBook(Book book)
-        +removeBook(Book book)
-    }
+### Cliente
+- **ClienteID** (PK)
+- Nombre
+- Email
+- Teléfono
+- Dirección
+- FechaRegistro
 
-    class LOS DUEÑOS DE ROSARIO {
-        +String name
-        +List<Book> books
-        +List<Member> members
-        +List<Librarian> librarians
-        +addMember(Member member)
-        +removeMember(Member member)
-    }
+### Pedido
+- **PedidoID** (PK)
+- FechaPedido
+- Total
+- Estado
+- ClienteID (FK)
 
-    CUERPO TECNICO --> LOS DUEÑOS DE ROSARIO : contiene
-    PLANTEL --> LOS DUEÑOS DE ROSARIO : registra
-    UTILEROS --> LOS DUEÑOS DE ROSARIO : administra
+### Producto
+- **ProductoID** (PK)
+- Nombre
+- Descripción
+- Precio
+- Categoría
+- FechaRegistro
+
+### Inventario
+- **InventarioID** (PK)
+- ProductoID (FK)
+- CantidadDisponible
+- CantidadReservada
+- ÚltimaActualización
+
+## Relaciones
+
+- **Cliente** 1 ---- N **Pedido**  
+  (Un cliente puede realizar múltiples pedidos.)
+
+- **Pedido** N ---- 1 **Producto**  
+  (Un pedido puede incluir múltiples productos.)
+
+- **Producto** 1 ---- 1 **Inventario**  
+  (Cada producto tiene un registro en inventario para su gestión.)
+
